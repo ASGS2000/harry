@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .click-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .hover-btn {
+            background-color: #008CBA;
+            color: white;
+        }
+        .output {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #35424a;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Event Handling in JavaScript</h1>
+
+    <button class="click-btn" id="clickButton">Click Me!</button>
+    <button class="hover-btn" id="hoverButton">Hover Over Me!</button>
+
+    <div class="output" id="output"></div>
+
+    <script>
+        // Function to handle click event
+        document.getElementById("clickButton").addEventListener("click", function() {
+            document.getElementById("output").innerText = "Button clicked!";
+        });
+
+        // Function to handle mouse over and mouse out events
+        const hoverButton = document.getElementById("hoverButton");
+        hoverButton.addEventListener("mouseover", function() {
+            document.getElementById("output").innerText = "Mouse is over the button!";
+        });
+
+        hoverButton.addEventListener("mouseout", function() {
+            document.getElementById("output").innerText = "";
+        });
+    </script>
+
+</body>
+</html>
