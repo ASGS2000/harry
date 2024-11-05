@@ -33,58 +33,79 @@ $trimmedString = trim("   Hello World   "); // Removes spaces from the start and
     <title>Dynamic PHP String Operations</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             background-color: #f4f4f4;
         }
+
         .container {
             max-width: 800px;
             margin: 2rem auto;
             padding: 0 1rem;
         }
+
         .output {
             background-color: #fff;
             padding: 1.5rem;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 2rem;
         }
+
         h1 {
             text-align: center;
             color: #007bff;
             margin-top: 2rem;
+            font-weight: 600;
         }
+
         h2 {
             color: #333;
+            font-weight: 500;
         }
+
         .interactive-section {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-bottom: 2rem;
         }
+
         .interactive-section input {
             margin-bottom: 1rem;
-            padding: 0.5rem 1rem;
+            padding: 0.75rem 1rem;
             border: none;
-            border-radius: 4px;
+            border-radius: 6px;
             font-size: 1rem;
             width: 100%;
-            max-width: 300px;
+            max-width: 400px;
             background-color: #f4f4f4;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
         }
+
         .interactive-section button {
-            padding: 0.5rem 1.5rem;
+            padding: 0.75rem 1.5rem;
             background-color: #007bff;
             color: #fff;
             border: none;
-            border-radius: 4px;
+            border-radius: 6px;
             font-size: 1rem;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
+
         .interactive-section button:hover {
             background-color: #0056b3;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            white-space: pre-wrap;
+            word-wrap: break-word;
         }
     </style>
 </head>
@@ -149,17 +170,17 @@ $trimmedString = trim("   Hello World   "); // Removes spaces from the start and
             stringResult.querySelector('pre').textContent = '';
 
             if (string) {
-                stringResult.querySelector('pre').textContent = Original String: "${string}"\n;
-                stringResult.querySelector('pre').textContent += Length: ${string.length}\n;
-                stringResult.querySelector('pre').textContent += Substring (0, 5): ${string.slice(0, 5)}\n;
-                stringResult.querySelector('pre').textContent += Reversed String: ${string.split('').reverse().join('')}\n;
-                stringResult.querySelector('pre').textContent += Uppercase: ${string.toUpperCase()}\n;
-                stringResult.querySelector('pre').textContent += Lowercase: ${string.toLowerCase()}\n;
-                stringResult.querySelector('pre').textContent += Trimmed: "${string.trim()}";
+                stringResult.querySelector('pre').textContent = 'Original String: "' + string + '"\n';
+                stringResult.querySelector('pre').textContent += 'Length: ' + string.length + '\n';
+                stringResult.querySelector('pre').textContent += 'Substring (0, 5): ' + string.slice(0, 5) + '\n';
+                stringResult.querySelector('pre').textContent += 'Reversed String: ' + string.split('').reverse().join('') + '\n';
+                stringResult.querySelector('pre').textContent += 'Uppercase: ' + string.toUpperCase() + '\n';
+                stringResult.querySelector('pre').textContent += 'Lowercase: ' + string.toLowerCase() + '\n';
+                stringResult.querySelector('pre').textContent += 'Trimmed: "' + string.trim() + '"';
             } else {
                 stringResult.querySelector('pre').textContent = 'Please enter a string.';
             }
         }
     </script>
 </body>
-</html>
+</html>   //string operation//
